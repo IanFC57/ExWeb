@@ -1,0 +1,11 @@
+/** regra CSS
+
+seletor { propriedade:valor;
+          propriedade2:valor;
+          propriedade3:valor;
+         }
+         */
+         h1{color: yellow;}
+
+         p{color: color-mix(in srgb, color-mix, color-mix);}
+
