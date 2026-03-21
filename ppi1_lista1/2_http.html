@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="introducao">
+        <h1>Como funciona o protocolo HTTP?</h1>
+        <p>O <mark>HTTP</mark> (Protocolo de Transferência de Hipertexto) é a base da comunicação na Web. Ele funciona no modelo <span class="destaque-azul">Cliente-Servidor</span>.</p>
+        <p>O <strong>Cliente</strong> (seu navegador) faz uma <em>Requisição (Request)</em>, e o <strong>Servidor</strong> (onde o site está hospedado) processa e devolve uma <em>Resposta (Response)</em>.</p>
+        
+        <br>
+        <img src="img/1_uQgK8zVKmCKvDYmEDucMyg.png" width="500" alt="Ilustração do Cliente enviando Request e Servidor devolvendo Response">
+        <br>
+    </div>
+
+    <hr>
+
+    <div id="sessao-requisicao">
+        <h2>1. A Requisição (Request)</h2>
+        <p>É o pedido que o cliente faz. Exemplo de um cliente enviando um formulário de cadastro:</p>
+        
+        <div class="bloco-de-codigo">
+            POST /cadastrar HTTP/1.1 <br>
+            Host: www.meusite.com.br <br>
+            User-Agent: Chrome/120.0 <br>
+            Content-Type: application/json <br>
+            <br>
+            {"nome": "Maria", "idade": 25}
+        </div>
+
+        <h3>Campos principais:</h3>
+        <ul>
+            <li><strong>Linha Inicial:</strong> Mostra o <em>Método</em> (POST - para enviar dados), o <em>Caminho</em> (/cadastrar) e a versão (HTTP/1.1).</li>
+            <li><strong>Cabeçalhos (Headers):</strong> Informações extras, como o site destino (Host) e o tipo de conteúdo sendo enviado (JSON).</li>
+            <li><strong>Corpo (Body):</strong> Os dados de verdade (o nome e a idade da Maria).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div id="sessao-resposta">
+        <h2>2. A Resposta (Response)</h2>
+        <p>É o que o servidor devolve após processar o pedido. Exemplo de sucesso no cadastro:</p>
+        
+        <div class="bloco-de-codigo">
+            HTTP/1.1 201 Created <br>
+            Date: Sex, 20 Mar 2026 15:00:00 GMT <br>
+            Server: Apache <br>
+            Content-Type: application/json <br>
+            <br>
+            {"mensagem": "Cadastro realizado com sucesso!"}
+        </div>
+
+        <h3>Campos principais:</h3>
+        <ol>
+            <li><strong>Linha de Status:</strong> Mostra a versão (HTTP/1.1), o <em>Código de Status</em> (201 - que significa "Criado") e a mensagem de status (Created).</li>
+            <li><strong>Cabeçalhos (Headers):</strong> Detalhes do servidor, como data, hora e formato da resposta.</li>
+            <li><strong>Corpo (Body):</strong> A mensagem final que o servidor entrega ao cliente confirmando que deu tudo certo.</li>
+        </ol>
+    </div>
+
+</body>
+</html>
