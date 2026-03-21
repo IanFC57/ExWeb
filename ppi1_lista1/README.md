@@ -10,6 +10,6 @@ Os arquivos reúnem exercícios de estruturação e estilização de páginas, i
 - Formulário de contato com validações básicas.
 
 Como foi a experiência
-Foi muito interessante ter contato direto com a construção de interfaces visuais. Fazer o código "na unha" me ajudou a entender como os sites realmente funcionam por trás das telas. A parte mais legal, sem dúvida, foi usar o GitHub Pages. Ver o projeto sair do meu computador e ficar online para qualquer pessoa acessar foi uma experiência muito gratificante!
+Foi muito interessante ter contato direto com a construção de interfaces visuais. Fazer o código na mão me ajudou a entender como os sites realmente funcionam por trás das telas.
 
 
