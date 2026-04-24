@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: "header header header" "nav contente" "footer";
+            height: 100vh ;
+        }
+
+        .box{border: 1px solid black; text-align: center;}
+        #box1{grid-area: header; background-color: deeppink;}
+        #box2{grid-area: nav; background-color: blue;}
+        #box3{grid-area: contente; background-color: brown;}
+        #box4{grid-area: footer; background-color: green;}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    
+</body>
+</html>
