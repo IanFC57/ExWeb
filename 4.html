@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 2 - Galeria Flex</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #222; }
+        .container {
+            display: flex;
+            width: 90vw;
+            height: 60vh;
+            gap: 15px;
+        }
+        .panel {
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            flex: 1; 
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: white;
+            font-family: sans-serif;
+            position: relative;
+        }
+        .panel.active {
+            flex: 5; 
+        }
+        
+        .img1 { background-image: url('https://picsum.photos/id/1015/800/600'); }
+        .img2 { background-image: url('https://picsum.photos/id/1018/800/600'); }
+        .img3 { background-image: url('https://picsum.photos/id/1036/800/600'); }
+        .img4 { background-image: url('https://picsum.photos/id/1043/800/600'); }
+        
+        .icon {
+            width: 40px; height: 40px; background: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            color: black; font-weight: bold; margin-bottom: 10px;
+        }
+        .texto { display: none; }
+        .active .texto { display: block; margin-left: 15px;}
+        .active .icone { display: none; } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel img1">
+            <div class="icone">🚶</div>
+        </div>
+        <div class="panel active img2">
+            <div class="texto">
+                <h2>Oretemauw</h2>
+                <p>Omuke trughte a otufta</p>
+            </div>
+        </div>
+        <div class="panel img3">
+            <div class="icone">🌲</div>
+        </div>
+        <div class="panel img4">
+            <div class="icone">☀️</div>
+        </div>
+    </div>
+</body>
+</html>
