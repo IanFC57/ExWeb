@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 3</title>
+    <style>
+        body { font-family: sans-serif; }
+
+        .Bandeiras{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between ;
+        }
+        
+        .bandeira {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+        }
+  
+        .franca {
+            display: flex;
+        }
+        .franca .faixa {
+            flex: 1; 
+        }
+        .franca-azul { background-color: blue; }
+        .franca-branca { background-color: white; }
+        .franca-vermelha { background-color: red; }
+
+        
+        .alemanha {
+            display: flex;
+            flex-direction: column; 
+        }
+        .alemanha .faixa {
+            flex: 1; 
+        }
+        .alemanha-preta { background-color: black; }
+        .alemanha-vermelha { background-color: red; }
+        .alemanha-amarela { background-color: gold; }
+
+        
+        .japao {
+            background-color: white;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+        .japao-circulo {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%; 
+        }
+    </style>
+</head>
+<body>
+    <div class="Bandeiras">
+
+        <div>
+             <h3>Bandeira da França</h3>
+    <div class="bandeira franca">
+        <div class="faixa franca-azul"></div>
+        <div class="faixa franca-branca"></div>
+        <div class="faixa franca-vermelha"></div>
+    </div>
+        </div>
+       
+    <div>
+        <h3>Bandeira da Alemanha</h3>
+    <div class="bandeira alemanha">
+        <div class="faixa alemanha-preta"></div>
+        <div class="faixa alemanha-vermelha"></div>
+        <div class="faixa alemanha-amarela"></div>
+    </div>
+    </div>
+    
+    <div>
+        <h3>Bandeira do Japão</h3>
+    <div class="bandeira japao">
+        <div class="japao-circulo"></div>
+    </div>
+    </div>
+
+    </div>
+
+    
+    
+</body>
+</html>
