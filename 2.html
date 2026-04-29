@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 2</title>
+    <style>
+        .B {
+            background-color: blue; 
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        
+        .B::before {
+            content: "<>";
+        }
+
+        
+        .B:hover {
+            animation: mudarCor 1s forwards; 
+        }
+
+        
+        @keyframes mudarCor {
+            from {
+                background-color: blue;
+            }
+            to {
+                background-color: green;
+                transform: scale(1.1); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>O que são regras CSS?</h1>
+    <dl>
+        <dt>Seletores: É a parte que escolhe quais elementos do html serão selecionados. Por exemplo: O seletor é p que seleciona todos os paragrafos. </dt>
+        <dt>Propriedade: É o aspecto que você quer alterar no elemento.
+        No exemplo, color e font-size são propriedades.</dt>
+        <dt>Valor: É o que será aplicado à propriedade.
+        No exemplo, blue é o valor de color e 16px é o valor de font-size.</dt>
+    </dl>
+
+
+    <h2>Testando regras CSS</h2>
+    <button class="B">Passe o mouse</button>
+</body>
+</html>
