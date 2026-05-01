@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5b</title>
+  <style>
+        .content{
+            margin: 0;
+            padding: 10px;
+            background-color: whitesmoke;
+        }
+        
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr; 
+            gap: 10px;
+            height: 95vh;
+        }
+        .box{
+            border-radius: 5px;
+            padding: 20px;
+        }
+       
+        .laranja{background-color: orange;}
+        .rosa{background-color: pink;}
+        .azul-claro{background-color: lightblue;}
+        .azul{background-color: blue;
+            height: 80px;
+        }
+        .verde{background-color: lightgreen;
+            height: 80px;
+        }
+        .amarelo{background-color: yellow;
+            height: 80px;
+        }
+  
+        .bolinhas{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly; 
+            align-items: center; 
+        }
+
+        .bolinhas div{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        
+        .bola1{background-color: orange;}
+        .bola2{background-color: pink;}
+        .bola3{background-color: yellowgreen;}
+        .bola4{background-color: purple;}
+    </style>
+</head>
+<body>
+  <div class="content">
+        <div class="container">
+        <div class="box laranja"></div>
+        <div class="box rosa"></div>
+        <div class="box azul-claro"></div>
+        <div class="box azul"></div>
+        <div class="box amarelo"></div>
+        <div class="box verde"></div>
+
+        <div class="bolinhas">
+            <div class="bola1"></div>
+            <div class="bola2"></div>
+            <div class="bola3"></div>
+            <div class="bola4"></div>
+        </div>
+
+    </div>
+    </div>
+    
+</body>
+</html>
+
