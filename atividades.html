@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Pratico 3
+        let nome = "Ian"
+        let idade = 18
+        let curso = "Informática"
+
+        console.log(`Meu nome é ${nome}, tenho ${idade} anos de idade e estudo ${curso}.`)
+        document.body.innerHTML = `<p>Meu nome é ${nome}, tenho ${idade} anos de idade e estudo ${curso}.</p>`
+
+       //Pratico 4
+       let nota1 = 8
+       let nota2 = 9
+       let media = (nota1 + nota2) / 2
+
+       console.log(`A média do aluno foi ${media}.`)
+
+
+       //Dias da semana
+       let dia=6
+
+       switch(dia){
+           case 1:
+            console.log("domingo");
+            break;
+           case 2:
+             console.log("segunda");
+              break;
+           case 3:
+             console.log("Terça");
+              break;
+           case 4:
+             console.log("Quarta");
+              break;
+           case 5:
+             console.log("Quinta");
+              break;
+           case 6:
+             console.log("Sexta");
+              break;
+           case 7:
+             console.log("Sabádo");
+              break;
+
+           default: 
+             console.error("dia Inválido")
+       }
+
+       //Verificar idade
+       idade = 18
+       if(idade <= 12 ){
+        console.log("é uma criança")
+       }
+       else if(idade < 18){
+        console.log("è um adolescente")
+       }
+       else{
+        console.log("É um adulto")
+       }
+
+       //Verificar nota
+       let nota=9
+       if(nota < 6){
+        console.log("reprovado")
+       }
+       else if((nota >= 6) && (nota <= 6.9)){
+        console.log("Regular")
+       }
+       else if((nota >= 7) && (nota <= 8.9)){
+        console.log("Bom")
+       }
+       else{
+        console.log("Excelente")
+       }
+
+
+       
+
+       //Laços de repetição For:
+       console.clear()
+
+       for(let i=10;i>=0;i--){
+        console.log(`Contado ${i} segundos`)
+       }
+
+       //While:
+       console.clear()
+
+       let j = 10
+       while(j >= 0){
+        console.log(`Contando ${j} segundos`)
+        j--
+       }
+
+
+
+       //Pratica 3 for
+       console.clear()
+       for(i = 0;i <= 100;i++){
+        console.log(i);
+       }
+
+
+       //pratica 4
+       console.clear()
+       let medias=0
+       function medias(nota1,nota2){
+        return ((nota1+nota2)/2)
+       }
+      
+      console.clear()
+       let somas = (a,b)=>{return a+b}
+       console.log(`soma: ${somas(10,20)}`)
+       document.body.addEventListener("onclick", ()=>(alert("oi")))
+
+
+
+
+    </script>
+    
+</body>
+</html>
