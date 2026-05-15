@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+    <style>
+        #divsoma{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de números na interface</h1>
+     <div id="divsoma">
+
+        <label for="EntradaA">A</label>
+        <input type="number" name="" id="EntradaA">
+        <label for="EntradaB">B</label>
+        <input type="number" name="" id="EntradaB">
+        <span>=</span>
+        <span id="Resultado"></span>
+        <br>
+        <br>
+        <input id="btn" type="button" value="Somar">
+</div>
+<script>
+    let A,B
+    let inputA = document.querySelector("#EntradaA")
+    let inputB = document.querySelector("#EntradaB")
+    let btn=document.getElementById("btn")
+
+    function soma(A,B){
+        return A+B
+    }
+
+
+    btn.addEventListener("click",()=>{
+        A=parseInt(inputA.value)
+        B=parseInt(inputB.value)
+        soma=A+B
+        let spanresultado=document.querySelector("#Resultado")
+        spanresultado.innerHTML=soma
+    })
+
+
+    
+</script>
+    
+    
+</body>
+</html>
