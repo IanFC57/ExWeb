@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h {
+            background-color: aquamarine;
+            width: 100px;
+        }
+        .h ::before 
+
+        .h :hover{
+            animation: mudarCor 1s forwards;
+        }
+        @keyframes mudarCor{
+            from{
+                background-color: aquamarine;
+            }
+            to{
+                background-color: green;
+                transform: scale(1.1); 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="h">Texto</h1>
+    <div id="texto" style="border: 1px solid black; height: 50vh;">
+    </div> <br>
+    <div id="status" style="border: 1px solid rgb(0, 0, 0);height: 1rem;""></div>
+
+    <canvas id="canvas" height="1080" width="1920"></canvas>
+
+    <script>
+        var tecla;
+        var mouse;
+        let txt = document.querySelector("#texto")
+        let status = document.querySelector("#status")
+        let canvas = document.querySelector("#canvas")
+        var desenhando = false;
+
+        txt.addEventListener('keydown', (a)=>{
+            tecla = a;
+            txt.innerHTML+=a.key
+            //txt.innerHTML;
+        })
+        txt.addEventListener('keypress', (a)=>{
+
+            if (a.key==="Backspace"){
+                txt.innerHTML=txt.innerHTML.slice(0,-1);
+            }
+        })
+        document.addEventListener('keydown', function(event){
+            status.innerHTML="Evento keydown: " + event.key;
+        })
+        document.addEventListener('mousemove', (a)=>{
+            status.innerHTML="Posição do mouse: " + a.clientX + ", " + a.clientY;
+
+        })
+        let ctx = canvas.getContext('2d')
+
+        canvas.addEventListener('mousemove', (e)=>{
+            mouse=e;
+            if(desenhando){
+                console.log("mouse" + e.offsetX + ","+e.offsetY)
+                ctx.lineTo(e.offsetX,e.offsetY)
+                ctx.stroke();
+            }
+            
+
+        })
+        canvas.addEventListener('mouseup', (e)=>{
+           desenhando != desenhando
+        })
+        canvas.addEventListener('mouseup', (e)=>{
+
+        })
+
+        
+         
+    </script>
+    
+</body>
+</html>
