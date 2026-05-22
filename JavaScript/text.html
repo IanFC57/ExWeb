@@ -73,10 +73,11 @@
 
         })
         canvas.addEventListener('mouseup', (e)=>{
-           desenhando != desenhando
+           desenhando = false
         })
-        canvas.addEventListener('mouseup', (e)=>{
-
+        canvas.addEventListener('mousedown', (e)=>{
+            desenhando=true;
+            ctx.moveTo(e.offsetX,e.offsetY);
         })
 
         
