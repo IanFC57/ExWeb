@@ -17,14 +17,17 @@
             if(!isset($_GET["num"])){
                 exit();
             }
-            function tabuada($num){
-                for ($i=0; $i<=10;$i++){
-                    echo "$num * $i=".($num*$i)."<br>";
+            $num = $_GET["num"];
+            function soma($numArray){
+                $soma = 0;
+                for ($i=0; $i<=count($numArray);$i++){
+                    $soma += (int)$numArray[$i];
                 }
+                return $soma;
             }
-
-            tabuada($_GET["num"]);
-
+            $valores = explode(",", $num);
+            $resultado = soma($valores);
+            echo $resultado;
         ?>
     
 </body>
