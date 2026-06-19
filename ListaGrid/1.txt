@@ -1,0 +1,5 @@
+Nível 14: 
+Solução: grid-column-start: 2;
+grid-row-start: 5;
+
+Explicação: o grid column é 2 para ir para a segunda coluna, e grid row é 5 para ir para a 5 casa da coluna.

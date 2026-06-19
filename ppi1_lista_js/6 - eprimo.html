@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primos em um intervalo</title>
+</head>
+<body>
+    <div>
+        <p>inicio:</p>
+        <input type="number" id="inicio"><br>
+        <p>Fim:</p>
+        <input type="number" id="fim"><br><br>
+        <button id="BCalculo">Calcular</button>
+        <p id="resultadoPrimos"></p>
+    </div>
+    
+
+    <script>
+        let inicio = parseInt(document.getElementById("inicio").value) 
+        let fim = parseInt(document.getElementById("fim").value) 
+        let Resultado = document.getElementById("resultadoPrimos")
+
+
+        function ehPrimo(n){
+            if (n <= 1){
+                return false;
+            }
+            if (n === 2){
+                return true;
+            }
+
+            for (let i = 2;i < n; i++) {
+                if(n % i === 0){
+                    return false
+                }else{
+                    return true
+                }
+            }
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>

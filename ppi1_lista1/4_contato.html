@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Entre em Contato</h1>
+    
+    <p class="instrucao">Por favor, preencha o formulário abaixo com seus dados e sua mensagem. Os campos marcados são obrigatórios.</p>
+
+    <form action="#" method="POST">
+        
+        <div>
+            <label for="nomeUsuario">Nome Completo:</label>
+            <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Digite seu nome" required>
+        </div>
+
+        <div>
+            <label for="emailUsuario">E-mail:</label>
+            <input type="email" id="emailUsuario" name="emailUsuario" placeholder="exemplo@email.com" required>
+        </div>
+        
+        <div>
+            <label for="idadeUsuario">Sua Idade:</label>
+            <input type="number" id="idadeUsuario" name="idadeUsuario" placeholder="Ex: 20" min="1" max="120" required>
+        </div>
+
+        <div>
+            <label for="assuntoMsg">Assunto:</label>
+            <input type="text" id="assuntoMsg" name="assuntoMsg" placeholder="Sobre o que quer falar?">
+        </div>
+
+        <div>
+            <label for="estadoUsuario">Estado:</label>
+            <select id="estadoUsuario" name="estadoUsuario">
+                <option value="">Selecione um estado...</option>
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="mensagemUsuario">Mensagem:</label>
+            <textarea id="mensagemUsuario" name="mensagemUsuario" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Enviar Mensagem</button>
+        </div>
+
+    </form>
+
+    <br>
+    <hr>
+    <a href="4_curriculo.html" class="link-voltar">Voltar para o currículo (4_curriculo.html)</a>
+
+</body>
+</html>
