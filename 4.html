@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0; 
+            padding: 10px;
+            min-height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            background-color: white; 
+            padding: 10px;
+            height: calc(100vh - 20px);
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: 60px 50px 1fr 50px 50px;
+            grid-template-areas:
+                "header header header"
+                "left banner right"
+                "left main right"
+                "left low right"
+                "footer footer footer";
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .header       { grid-area: header; background-color: #fbbc04; }
+        .left-aside   { grid-area: left;   background-color: #34a853; }
+        .banner       { grid-area: banner; background-color: #ea4335; }
+        .main-content { grid-area: main;   background-color: #4285f4; }
+        .right-aside  { grid-area: right;  background-color: #fbbc04; }
+        .low-content  { grid-area: low;    background-color: #34a853; }
+        .footer       { grid-area: footer; background-color: #4285f4; }
+
+        .main-content span {
+            font-size: 12px;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                height: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header"
+                    "banner"
+                    "main"
+                    "left"
+                    "right"
+                    "low"
+                    "footer";
+            }
+
+            .grid-item {
+                padding: 40px 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        
+        <div class="grid-item left-aside">Left Aside</div>
+        
+        <div class="grid-item banner">Banner</div>
+        
+        <div class="grid-item main-content">
+            Main Content
+        </div>
+        
+        <div class="grid-item right-aside">Right Aside</div>
+        
+        <div class="grid-item low-content">Low Content</div>
+        
+        <div class="grid-item footer">Footer</div>
+    </div>
+</body>
+</html>
