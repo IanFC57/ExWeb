@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+</head>
+<body>
+<h1 id="titulo">O que é JavaScript?</h1>
+
+<h2 id="h2motivacao">1. Motivação para a criação do JavaScript</h2>
+<p id="motivacao">
+    Javascript surgiu em 1995 e foi criada por Brendan Eich, a pedido da empresa Netscape (um dos primeiros navegadores) com o objetivo de validar formulários HTML, para criar interações mais dinâmicas ao desenvolver páginas da Web, aplicativos, servidores, jogos, etc. 
+</p>
+
+<h2 id="h2execucao">2. Diferença entre execução no Navegador e no Servidor</h2>
+<p id="execucao">
+    Client: Aplicações Client Side são renderizadas e processadas no lado do cliente, ou seja, no navegador dos usuários. Sendo assim, todo gerenciamento de rotas, requisições, interações, etc... Serão feitas via JavaScript onde o navegador vai interpretá-las e executá-las. <br>
+    Server: Aplicações Server Side são renderizadas e processas pelo servidor, o navegador apenas vai receber os códigos HTML e colocar na tela, as informações já vem montadas pela resposta do servidor não precisamos disparar uma requisição para pegar os dados e depois montar uma tabela, a mesma já vem montada.
+</p>
+
+<h2 id="h2sandbox">3. O conceito de Sandbox no navegador</h2>
+<p id="sandbox">
+    Um ambiente sandbox é uma máquina virtual isolada na qual um código de software potencialmente inseguro pode ser executado sem afetar os recursos de rede ou os aplicativos locais. Pense em um sandbox como um ambiente controlado onde aplicativos, códigos e arquivos podem ser testados ou executados para verificar seu comportamento. Se o software se comportar de forma maliciosa ou inesperada, ele não terá o poder de afetar nada fora desse ambiente isolado.
+</p>
+
+<h2 id="h2objetos">4. Objetos globais</h2>
+<p id="objetos">
+    O objeto global fornece variáveis ​​e funções que estão disponíveis em qualquer lugar. Por padrão, inclui aquelas que são inerentes à linguagem ou ao ambiente.
+</p>
+<h2 id="h2relogio">5. Exemplo Prático: Hora Atual em Tempo Real</h2>
+<p id="relogio">
+    Eu usei o JavaScript para encontrar este parágrafo pelo ID e atualizar o texto dele com a hora do sistema: 
+    <span id="hora"></span>
+</p>
+
+<h2 id="h2fontes">Fontes utilizadas</h2>
+
+<ul id="lista-fontes">
+    <li id="fonte1">https://www.resilia.com.br/blog/javascript-o-que-e-como-surgiu-e-onde-utilizar/</li>
+    <li id="fonte2">https://cursos.alura.com.br/forum/topico-diferenca-entre-rodar-a-aplicacao-em-client-e-server-side-99808</li>
+    <li id="fonte3">https://www.proofpoint.com/us/threat-reference/sandbox</li>
+    <li id="fonte4">https://javascript-info.translate.goog/global-object?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc</li>
+</ul>
+
+<script id="codigo">
+    alert("Olá! Bem-vindo.");
+    console.log("O codigo foi carregado com sucesso!");
+
+    function atualizarRelogio() {
+        var momentoAtual = new Date();
+        var horas = momentoAtual.getHours();
+        var minutos = momentoAtual.getMinutes();
+        var segundos = momentoAtual.getSeconds();
+        if (horas < 10) {
+            horas = "0" + horas;
+        }
+        if (minutos < 10) {
+            minutos = "0" + minutos;
+        }
+        if (segundos < 10) {
+            segundos = "0" + segundos;
+        }
+
+        var textoHoraFormatada = horas + ":" + minutos + ":" + segundos;
+
+        document.getElementById("hora").innerHTML = textoHoraFormatada;
+    }
+    atualizarRelogio();
+    setInterval(atualizarRelogio, 1000);
+</script>
+</body>
+</html>

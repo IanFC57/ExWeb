@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #EBF2FA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #Principal {
+        color: #05668D;
+    }
+    
+    .caixa {
+        width: 150px;
+        height: 150px;
+        background-color: #679436;
+        border-radius: 8px;
+        border: 2px solid #000000;
+    }
+
+    </style>
+    
+</head>
+<body>
+    <h1 id="Principal">Pressione a tecla de ESPAÇO</h1>
+    
+    
+
+    <script>
+        var paletaDeCores = ["#05668D", "#427AA1", "#EBF2FA", "#679436", "#A5BE00"];
+
+        document.addEventListener("keydown", function(evento) {
+            if (evento.code === "Space") {
+                var indiceFundo = Math.floor(Math.random() * paletaDeCores.length);
+                var indiceTexto = Math.floor(Math.random() * paletaDeCores.length);
+                var indiceCaixa1 = Math.floor(Math.random() * paletaDeCores.length);
+                var indiceCaixa2 = Math.floor(Math.random() * paletaDeCores.length);
+                var indiceCaixa3 = Math.floor(Math.random() * paletaDeCores.length);
+
+                document.body.style.backgroundColor = paletaDeCores[indiceFundo];
+                document.getElementById("textoPrincipal").style.color = paletaDeCores[indiceTexto];
+                document.getElementById("caixa1").style.backgroundColor = paletaDeCores[indiceCaixa1];
+                document.getElementById("caixa2").style.backgroundColor = paletaDeCores[indiceCaixa2];
+                document.getElementById("caixa3").style.backgroundColor = paletaDeCores[indiceCaixa3];
+            }
+        });
+    </script>
+    
+</body>
+</html>
