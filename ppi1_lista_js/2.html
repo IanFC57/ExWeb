@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <p>Clique no botão abaixo para rodar o código. Ele vai identificar os tipos das variáveis e fazer contas entre tipos diferentes, mostrando tudo aqui na tela e também no console do navegador.</p><br>
+    
+    <button onclick="executarScript()">Executar</button>
+
+    <div class="container">
+        <h2>Tipos de Variáveis Encontrados (usando typeof):</h2>
+        <p id="pstring">String: Aguardando clique...</p>
+        <p id="pnumero">Number: Aguardando clique...</p>
+        <p id="pbooleano">Boolean: Aguardando clique...</p>
+        <p id="pindefinido">Undefined: Aguardando clique...</p>
+        <p id="pnulo">Null: Aguardando clique...</p>
+        <p id="pobjeto">Object: Aguardando clique...</p>
+        <p id="parray">Array: Aguardando clique...</p>
+    </div>
+
+    <div class="container">
+        <h2>Resultados das Operações e Explicações:</h2>
+        <p id="poperacao1">Operação 1 (String + Number): Aguardando...</p>
+        <p id="poperacao2">Operação 2 (Boolean * Number): Aguardando...</p>
+        <p id="poperacao3">Operação 3 (String + Boolean): Aguardando...</p>
+        <p id="poperacao4">Operação 4 (Null + Number): Aguardando...</p>
+    </div>
+
+    <script>
+        function executarScript() {
+            var texto = "Código ";
+            var numero = 10;
+            var ligado = true;
+            var naoDefinida;
+            var vazio = null;
+            var pessoa = { nome: "Ian", idade: 18 };
+            var listaNumeros = [1, 2, 3];
+
+            document.getElementById("pstring").innerHTML = "String: O tipo da variável 'texto' é -> " + typeof texto;
+            document.getElementById("pnumero").innerHTML = "Number: O tipo da variável 'numero' é -> " + typeof numero;
+            document.getElementById("pbooleano").innerHTML = "Boolean: O tipo da variável 'ligado' é -> " + typeof ligado;
+            document.getElementById("pindefinido").innerHTML = "Undefined: O tipo da variável 'naoDefinida' é -> " + typeof naoDefinida;
+            document.getElementById("pnulo").innerHTML = "Null: O tipo da variável 'vazio' é -> " + typeof vazio;
+            document.getElementById("pobjeto").innerHTML = "Object: O tipo da variável 'pessoa' é -> " + typeof pessoa;
+            document.getElementById("parray").innerHTML = "Array: O tipo da variável 'listaNumeros' é -> " + typeof listaNumeros;
+
+            var resultado1 = texto + numero;       
+            var resultado2 = ligado * numero;      
+            var resultado3 = texto + ligado;       
+            var resultado4 = vazio + numero;       
+
+            console.log("SAÍDA DO CONSOLE");
+            console.log("Operação 1 (texto + numero):", resultado1);
+            console.log("Operação 2 (ligado * numero):", resultado2);
+            console.log("Operação 3 (texto + ligado):", resultado3);
+            console.log("Operação 4 (vazio + numero):", resultado4);
+
+            document.getElementById("poperacao1").innerHTML = "Operação 1 (String + Number):\nResultado: '" + resultado1 + "'\nO JavaScript transformou o número 10 em texto e juntou com a palavra.";
+            document.getElementById("poperacao2").innerHTML = "Operação 2 (Boolean * Number):\nResultado: " + resultado2 + "\nO JavaScript transformou o valor 'true' no número 1 para conseguir multiplicar (1 * 10 = 10). Se fosse 'false', valeria 0.";
+            document.getElementById("poperacao3").innerHTML = "Operação 3 (String + Boolean):\nResultado: '" + resultado3 + "'\nO valor booleano 'true' virou um texto puro e foi colado logo após a palavra original.";
+            document.getElementById("poperacao4").innerHTML = "Operação 4 (Null + Number):\nResultado: " + resultado4 + "\nO valor 'null' foi tratado como se fosse o número 0 na operação matemática, então a conta ficou 0 + 10 = 10.";
+        }
+    </script>
+    
+</body>
+</html>

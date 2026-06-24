@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorteio de Números</h1>
+        
+        <label for="minimo">Mínimo:</label>
+        <input type="number" id="minimo" value="1">
+        
+        <label for="maximo">Máximo:</label>
+        <input type="number" id="maximo" value="100">
+        <br><br>
+        
+        <button onclick="sortear()">Sortear</button>
+        
+        <p id="resultado"></p>
+        
+        <ul id="listaSorteados"></ul>
+    </div>
+
+    <script>
+        var sorteados = [];
+
+        function sortear() {
+            var min = parseInt(document.getElementById("minimo").value);
+            var max = parseInt(document.getElementById("maximo").value);
+
+            if (isNaN(min) || isNaN(max) || min >= max) {
+                alert("Por favor, digite um intervalo válido!");
+                return;
+            }
+
+            var numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            document.getElementById("resultado").innerText = "Número sorteado agora: " + numeroSorteado;
+
+            var encontrou = false;
+
+            for (var i = 0; i < sorteados.length; i++) {
+                if (sorteados[i].numero === numeroSorteado) {
+                    sorteados[i].vezes = sorteados[i].vezes + 1;
+                    encontrou = true;
+                    break;
+                }
+            }
+
+            if (encontrou === false) {
+                sorteados.push({ numero: numeroSorteado, vezes: 1 });
+            }
+
+            var lista = document.getElementById("listaSorteados");
+            lista.innerHTML = "";
+
+            for (var j = 0; j < sorteados.length; j++) {
+                var itemLista = document.createElement("li");
+                
+                if (sorteados[j].vezes > 1) {
+                    itemLista.innerHTML = sorteados[j].numero + " (sorteado " + sorteados[j].vezes + " vezes)";
+                } else {
+                    itemLista.innerHTML = sorteados[j].numero;
+                }
+                
+                lista.appendChild(itemLista);
+            }
+        }
+    </script>
+    
+</body>
+</html>
