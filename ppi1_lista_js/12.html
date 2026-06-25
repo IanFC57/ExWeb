@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Digite seu nome">
+  <button id="saveButton">Salvar</button>
+  <p id="greeting"></p>
+
+  <script>
+    let campoNome = document.getElementById("nameInput");
+    let botaoSalvar = document.getElementById("saveButton");
+    let textoSaudacao = document.getElementById("greeting");
+
+    let nomeSalvo = localStorage.getItem("nomeDigitado");
+
+    if (nomeSalvo) {
+        textoSaudacao.innerHTML = "Bem-vindo de volta, " + nomeSalvo + "!";
+    }
+
+    botaoSalvar.addEventListener("click", function() {
+        let nome = campoNome.value;
+        localStorage.setItem("nomeDigitado", nome);
+        textoSaudacao.innerHTML = "Olá, " + nome + "!";
+    });
+  </script>
+</body>
+
+</html>
