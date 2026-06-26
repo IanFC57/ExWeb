@@ -1,0 +1,3 @@
+Não são, o PHP é executado ao lado do servidor, já o JavaScript é executado ao lado do cliente.
+ Isso significa que o PHP é processado pelo servidor, que gera o conteúdo HTML e manda para o Navegador,
+e o JavScript é e processado diretamente pelo Navegador.
